@@ -21,16 +21,16 @@ def removeBrackets(name):
     return result
 
 
-file_loc = "/Users/alielassche/dropbox/student-assistentschap/netwerken_huwelijksgedichten/gedichtenGGD_STCN.csv"
+file_loc = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur.csv'
 gedichten = csv.DictReader(open(file_loc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 
 
-nodesloc = '/Users/alielassche/dropbox/student-assistentschap/netwerken_huwelijksgedichten/nodes.csv'
+nodesloc = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/nodes.csv'
 nodescsv = csv.DictReader(open(nodesloc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 
-edgesfile = '/Users/alielassche/dropbox/student-assistentschap/netwerken_huwelijksgedichten/edges.csv'
+edgesfile = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/edges.csv'
 f = open(edgesfile, 'w', newline='', encoding='utf-8')
 csvWriter = csv.writer(f, delimiter=';', quotechar='"',
                            quoting=csv.QUOTE_MINIMAL)
@@ -84,7 +84,7 @@ csvWriter = csv.writer(f, delimiter=';', quotechar='"',
                            quoting=csv.QUOTE_MINIMAL)
 gedichten = csv.DictReader(open(file_loc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
-nodesloc = '/Users/alielassche/dropbox/student-assistentschap/netwerken_huwelijksgedichten/nodes.csv'
+nodesloc = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/nodes.csv'
 nodescsv = csv.DictReader(open(nodesloc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 

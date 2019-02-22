@@ -6,11 +6,11 @@ def writecsv(csvwriter, attribs, d):
         l.append(d[a])
     csvwriter.writerow(l)
 
-file_loc = "/Users/alielassche/Dropbox/Student-assistentschap/Netwerken_huwelijksgedichten/gedichtenGGD_STCN.csv"
+file_loc = "/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur.csv"
 gedichten = csv.DictReader(open(file_loc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 
-f = open('/Users/alielassche/Dropbox/Student-assistentschap/Netwerken_huwelijksgedichten/nodes.csv', 'w', newline='', encoding='utf-8')
+f = open('/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/nodes.csv', 'w', newline='', encoding='utf-8')
 csvWriter = csv.writer(f, delimiter=';', quotechar='"',
                            quoting=csv.QUOTE_MINIMAL)
 attribs = ['id', 'label', 'function', 'year', 'place']
