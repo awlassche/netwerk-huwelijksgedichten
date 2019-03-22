@@ -6,14 +6,14 @@ def writecsv(csvwriter, attribs, d):
         l.append(d[a])
     csvwriter.writerow(l)
 
-file_loc = "/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur.csv"
+file_loc = "/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur_stripped.csv"
 gedichten = csv.DictReader(open(file_loc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 
 f = open('/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/nodes.csv', 'w', newline='', encoding='utf-8')
 csvWriter = csv.writer(f, delimiter=';', quotechar='"',
                            quoting=csv.QUOTE_MINIMAL)
-attribs = ['id', 'label', 'function', 'year', 'place']
+attribs = ['id', 'label', 'function', 'year', 'place_print']
 csvWriter.writerow(attribs)
 rowDict = {}
 id = 1
@@ -37,9 +37,9 @@ for gedicht in gedichten:
                     else:
                         writeDict['year'] = ''
                     if item == 'Drukker':
-                        writeDict['place'] = gedicht['Plaats']
+                        writeDict['place_print'] = gedicht['Plaats_druk']
                     else:
-                        writeDict['place'] = ''
+                        writeDict['place_print'] = ''
                     rowDict[writeDict['label']] = writeDict
                 elif stripped_name in rowDict:
                     writeDict = rowDict[stripped_name]

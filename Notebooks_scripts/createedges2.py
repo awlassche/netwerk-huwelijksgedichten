@@ -21,7 +21,7 @@ def removeBrackets(name):
     return result
 
 
-file_loc = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur.csv'
+file_loc = '/Users/alielassche/documents/github/netwerk-huwelijksgedichten/data/gedichtenGGD_STCN_Steur_stripped.csv'
 gedichten = csv.DictReader(open(file_loc, newline='', encoding='utf-8'), delimiter=';',
                          quotechar='"')
 
