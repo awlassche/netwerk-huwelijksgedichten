@@ -33,7 +33,7 @@ for gedicht in gedichten:
                     writeDict['label'] = stripped_name
                     writeDict['function'] = function
                     if item == 'Bruidspaar':
-                        writeDict['year'] = gedicht['Jaar']
+                        writeDict['year'] = gedicht['year']
                     else:
                         writeDict['year'] = ''
                     if item == 'Drukker':
